@@ -1,0 +1,233 @@
+# =============================================================================
+# ARCHIVOS SENSIBLES - NUNCA SUBIR A GIT
+# =============================================================================
+
+# Variables de entorno con datos sensibles
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Claves y certificados
+*.key
+*.pem
+*.crt
+*.p12
+secrets/
+private/
+
+# =============================================================================
+# NODE.JS
+# =============================================================================
+
+# Dependencias
+node_modules/
+jspm_packages/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+*.log
+
+# Cache
+.npm
+.eslintcache
+.node_repl_history
+*.tsbuildinfo
+
+# =============================================================================
+# DATOS Y BASE DE DATOS
+# =============================================================================
+
+# Directorio de datos (contiene información local)
+data/
+db/
+*.db
+*.sqlite
+*.sqlite3
+
+# IPFS local
+.ipfs/
+ipfs/
+
+# =============================================================================
+# LOGS Y TEMPORALES
+# =============================================================================
+
+# Logs de la aplicación
+logs/
+*.log
+log/
+
+# Archivos temporales
+tmp/
+temp/
+*.tmp
+*.temp
+
+# =============================================================================
+# SISTEMA OPERATIVO
+# =============================================================================
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# EDITORES E IDEs
+# =============================================================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+
+# =============================================================================
+# TESTING
+# =============================================================================
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output
+
+# Test results
+test-results/
+junit.xml
+
+# =============================================================================
+# BUILD Y DISTRIBUCIÓN
+# =============================================================================
+
+# Build outputs
+dist/
+build/
+out/
+
+# Compiled binary addons
+build/Release
+
+# TypeScript cache
+*.tsbuildinfo
+
+# =============================================================================
+# DOCKER
+# =============================================================================
+
+# Docker compose overrides
+docker-compose.override.yml
+
+# =============================================================================
+# BACKUPS
+# =============================================================================
+
+# Archivos de respaldo
+*.backup
+*.bak
+*.old
+backup/
+backups/
+
+# =============================================================================
+# CERTIFICADOS Y CONTRATOS
+# =============================================================================
+
+# Contratos compilados (si se regeneran)
+contracts/build/
+artifacts/
+
+# =============================================================================
+# MISCELÁNEOS
+# =============================================================================
+
+# Package manager locks (opcional, decide si quieres versionarlos)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Uploads temporales
+uploads/
+upload/
+
+# Cache de servicios
+.cache/
+
+# PM2
+.pm2/
+
+# Serverless
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

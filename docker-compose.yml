@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  rastrar-api:
+    build: .
+    container_name: rastrar-api
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - PORT=${PORT:-3000}
+      - RPC_URL=${RPC_URL}
+      - CHAIN_ID=${CHAIN_ID}
+      - EXPLORER_URL=${EXPLORER_URL}
+      - PRIVATE_KEY=${PRIVATE_KEY}
+      - X_TOKEN_API=${X_TOKEN_API}
+      - IPFS_ENDPOINT=${IPFS_ENDPOINT:-local}
+      - IPFS_GATEWAY=${IPFS_GATEWAY}
+      - PINATA_ENABLED=${PINATA_ENABLED:-false}
+      - PINATA_JWT=${PINATA_JWT}
+    volumes:
+      # Persistir datos
+      - ./data:/app/data
+      - ./logs:/app/logs
+      # Montar .env (asegúrate de crearlo primero)
+      - ./.env:/app/.env:ro
+    networks:
+      - rastrar-network
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  rastrar-network:
+    driver: bridge
+
+volumes:
+  data:
+  logs:
