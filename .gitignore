@@ -9,6 +9,9 @@
 .env.test.local
 .env.production.local
 send.sh
+.gitignore
+getcerts.sh
+package-lock.json
 
 # Claves y certificados
 *.key
